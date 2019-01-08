@@ -204,10 +204,10 @@ else:
   whereToPut = 'updater-out'
 
 
-def processFile(fileName):  
-  infiledat = open(fileName, 'r').readlines()
+def processFile(fileName): 
   outfile = open(os.path.join(whereToPut, fileName), 'w')
-  try:
+  try: 
+    infiledat = open(fileName, 'r').readlines()
     for line in infiledat:
       outfile.write(processLine(line))
   except:
